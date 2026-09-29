@@ -1,14 +1,15 @@
 public class NumberProgram {
-
-    public static void main(String[] args) {
-        int[] values = {3, 7, 2, 9, 4};
-
-        int result = findResult(values);
-
-        System.out.println("Result: " + result);
+    public static int findResult(int[] values) {
+        int result = 0;
+        for (int value : values) {
+            result += value;
+        }
+        return result;
     }
 
-    public static int findResult(int[] values) {
-        return 0;
+    public static void main(String[] args) {
+        int[] numbers = {4, 8, 15, 16, 23, 42};
+
+        System.out.println("Result: " + findResult(numbers));
     }
 }
