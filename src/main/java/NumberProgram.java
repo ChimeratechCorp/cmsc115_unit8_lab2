@@ -1,15 +1,11 @@
 public class NumberProgram {
     public static int findResult(int[] values) {
-        int result = 0;
-        for (int value : values) {
-            result += value;
+        int max = values[0];
+        for (int i = 1; i < values.length; i++) {
+            if (values[i] > max) {
+                max = values[i];
+            }
         }
-        return result;
-    }
-
-    public static void main(String[] args) {
-        int[] numbers = {4, 8, 15, 16, 23, 42};
-
-        System.out.println("Result: " + findResult(numbers));
+        return max;
     }
 }

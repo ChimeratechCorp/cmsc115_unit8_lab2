@@ -38,16 +38,27 @@ Commit message:
 ## Iteration 2
 
 What changed:
--
+- The method no longer adds up the numbers. It now finds the largest
+  value in the array. Its starts by initialing `max` to the first index in array
+  then assigns `max` when a new large number is found.
+  
 
 What improved:
--
+- 3 of 4 tests passed from the first iteration
+- `testBasicArray()` passed returning 9 as expected.
+- `testNegativeNumbers()` now passed returning -1. Comparing values instead of
+  adding them correctly handles negative numbers.
+- `testSingleValue()` passed again but compared for the first
+  iteration, the method actually finds the largest value instead of passing by coincidence.
+
 
 What still failed and why:
--
+- `testEmpyArrary()` failed. Index 0 out of bounds for length 0.
+  An empty array has no `[0]` element. My prompt didn't mention testing for empty array, so it didn't make it.
+  handle that case.
 
 Commit message:
--
+- Iteration 2: largest value implementation
 
 ---
 
@@ -55,7 +66,6 @@ Commit message:
 
 Final behavior:
 -
-
 What was fixed:
 -
 
