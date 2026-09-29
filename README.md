@@ -65,20 +65,39 @@ Commit message:
 ## Iteration 3
 
 Final behavior:
--
+- The findResult method returns the largest integer in the array. If the
+  array is empty, it returns Integer.MIN_VALUE (-2147483648). 
+- All 4 tests passed.
+
 What was fixed:
--
+- In Iteration two, testEmptyArray crashed because an empty array can't have a `[0]` value.
+- To fix the testEmptyArray AI added if statement at the top of the method that checks whether
+  values.length is 0 or empty. If it is, the method returns Integer.MIN_VALUE.
+- All other fixes were logic based on the prompt that was given to AI.
 
 What you learned:
--
+- AI generation is all based on the prompt given. If you want a specific task complete, 
+  you AI prompt to be detailed enough to describe the task you want to be complete. 
+- So, the more specific my prompt was the better the AI's code matched what I wanted.
+- AI generated code can easily miss edge cases because it only completing code that is specifically asked for. 
+  AI didn't consider edge cases until I asked for it directly.
 
 Commit message:
--
+- Complete the Final Reflection section
 
 ---
 
 ## Final Reflection
 
 - How did AI responses change across prompts?
+- AI generated code that I asked for specifically. The code got better the more 
+  detailed prompt I gave it. 
+
 - How did testing affect your changes?
+- The testing showed the expected results and my actual results and all the methods used for the program
+  so I can get an idea what the goal of the application will be. 
+
 - What did version control help you understand?
+- Commiting after each iteration gave me record on how the code changed each time. I can use GitHub commit history
+  to see previous changes and revert to those changes if I need to. I also learned from last lab to correctly comment 
+  each commit to help navigate through commits. 
